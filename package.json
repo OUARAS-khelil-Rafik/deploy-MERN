@@ -1,0 +1,18 @@
+{
+  "name": "mern-app",
+  "version": "1.0.0",
+  "description": "MERN Stack Application deployed on Azure",
+  "main": "server/server.js",
+  "scripts": {
+    "install-all": "npm install && cd client && npm install && cd ..",
+    "build": "cd client && npm run build && cd ..",
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client start\"",
+    "start": "node server/server.js"
+  },
+  "keywords": ["mern", "azure"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
